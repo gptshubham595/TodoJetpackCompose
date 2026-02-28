@@ -1,4 +1,4 @@
-package com.example.todojetpackcompose.ui.theme
+package com.shubham.todojetpackcompose.presentation.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

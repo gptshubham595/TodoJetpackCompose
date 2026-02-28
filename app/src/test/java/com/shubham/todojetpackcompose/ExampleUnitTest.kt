@@ -1,4 +1,4 @@
-package com.example.todojetpackcompose
+package com.shubham.todojetpackcompose
 
 import org.junit.Test
 
