@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<appfunctions>
+    <appfunction>
+        <function_id>com.shubham.todojetpackcompose.appfunctions.`impl`.AddTodoFunctionImpl#addTodo</function_id>
+        <schema_category>todo</schema_category>
+        <schema_name>addTodo</schema_name>
+        <schema_version>1</schema_version>
+        <enabled_by_default>true</enabled_by_default>
+    </appfunction>
+    <appfunction>
+        <function_id>com.shubham.todojetpackcompose.appfunctions.`impl`.CompleteTodoFunctionImpl#completeTodo</function_id>
+        <schema_category>todo</schema_category>
+        <schema_name>completeTodo</schema_name>
+        <schema_version>1</schema_version>
+        <enabled_by_default>true</enabled_by_default>
+    </appfunction>
+    <appfunction>
+        <function_id>com.shubham.todojetpackcompose.appfunctions.`impl`.DeleteTodoFunctionImpl#deleteTodo</function_id>
+        <schema_category>todo</schema_category>
+        <schema_name>deleteTodo</schema_name>
+        <schema_version>1</schema_version>
+        <enabled_by_default>true</enabled_by_default>
+    </appfunction>
+    <appfunction>
+        <function_id>com.shubham.todojetpackcompose.appfunctions.`impl`.GetAllTodosFunctionImpl#getAllTodos</function_id>
+        <schema_category>todo</schema_category>
+        <schema_name>getAllTodos</schema_name>
+        <schema_version>1</schema_version>
+        <enabled_by_default>true</enabled_by_default>
+    </appfunction>
+    <appfunction>
+        <function_id>com.shubham.todojetpackcompose.appfunctions.`impl`.GetPendingTodosFunctionImpl#getPendingTodos</function_id>
+        <schema_category>todo</schema_category>
+        <schema_name>getPendingTodos</schema_name>
+        <schema_version>1</schema_version>
+        <enabled_by_default>true</enabled_by_default>
+    </appfunction>
+    <appfunction>
+        <function_id>com.shubham.todojetpackcompose.appfunctions.`impl`.GetTodoStatsFunctionImpl#getTodoStats</function_id>
+        <schema_category>todo</schema_category>
+        <schema_name>getTodoStats</schema_name>
+        <schema_version>1</schema_version>
+        <enabled_by_default>true</enabled_by_default>
+    </appfunction>
+</appfunctions>

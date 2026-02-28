@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".TodoApp"
         android:allowBackup="true"
@@ -11,12 +13,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TodoJetpackCompose"
-        tools:targetApi="31">
+        android:theme="@style/Theme.TodoJetpackCompose">
         <activity
             android:name=".presentation.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.TodoJetpackCompose">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +24,38 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- ADD 1: The AppFunctions service -->
+        <!-- The KSP compiler generates the body of this service automatically. -->
+        <!-- This is how the Android OS routes agent calls into your app. -->
+        <service
+            android:name="androidx.appfunctions.AppFunctionService"
+            android:exported="true"
+            android:permission="android.permission.BIND_APP_FUNCTION_SERVICE">
+            <intent-filter>
+                <action android:name="android.app.appfunctions.AppFunctionService" />
+            </intent-filter>
+        </service>
+
+        <!-- ADD 2: Points to the XML metadata file KSP generates at build time -->
+        <!-- This file lists all your @AppFunction methods so the OS can index them -->
+        <!-- KSP Autogenerates it-->
+        <meta-data
+            android:name="androidx.appfunctions.APP_FUNCTIONS_METADATA"
+            android:resource="@xml/app_functions" />
+        <!-- A natural language description that the agent can read and show to the user. -->
+
+        <property
+            android:name="android.app.appfunctions.app_metadata"
+            android:resource="@xml/app_metadata" />
+
+        <provider
+            android:name="com.shubham.todojetpackcompose.appfunctions.ToolProvider"
+            android:authorities="com.shubham.todojetpackcompose.appfunctions.provider"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedContentProvider" />
+
     </application>
 
 </manifest>

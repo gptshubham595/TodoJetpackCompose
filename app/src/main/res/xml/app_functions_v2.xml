@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<appfunctions>
+    <appfunction>
+        <id>com.shubham.todojetpackcompose.appfunctions.`impl`.AddTodoFunctionImpl#addTodo</id>
+        <enabledByDefault>true</enabledByDefault>
+        <description>Creates and saves a new todo item with the given task description.
+ Use this when the user wants to add, create, or remember a new task or todo item.</description>
+        <parameters>
+            <dataTypeMetadata>
+                <id>unused</id>
+                <isNullable>false</isNullable>
+                <type>8</type>
+            </dataTypeMetadata>
+            <id>unused</id>
+            <isRequired>true</isRequired>
+            <name>task</name>
+            <description>The task description to save. Must not be blank.</description>
+        </parameters>
+        <response>
+            <id>unused</id>
+            <valueType>
+                <dataTypeReference>com.shubham.todojetpackcompose.appfunctions.schemas.TodoMutationResult</dataTypeReference>
+                <id>unused</id>
+                <isNullable>false</isNullable>
+                <type>11</type>
+            </valueType>
+            <description>A [TodoMutationResult] indicating whether the task was saved successfully.</description>
+        </response>
+        <schemaCategory>todo</schemaCategory>
+        <schemaName>addTodo</schemaName>
+        <schemaVersion>1</schemaVersion>
+        <functionId>com.shubham.todojetpackcompose.appfunctions.`impl`.AddTodoFunctionImpl#addTodo</functionId>
+    </appfunction>
+    <appfunction>
+        <id>com.shubham.todojetpackcompose.appfunctions.`impl`.CompleteTodoFunctionImpl#completeTodo</id>
+        <enabledByDefault>true</enabledByDefault>
+        <description>Marks the todo with the given ID as completed.
+ Use this when the user says they finished, completed, or are done with a specific task.</description>
+        <parameters>
+            <dataTypeMetadata>
+                <id>unused</id>
+                <isNullable>false</isNullable>
+                <type>8</type>
+            </dataTypeMetadata>
+            <id>unused</id>
+            <isRequired>true</isRequired>
+            <name>todoId</name>
+            <description>The unique ID of the todo to complete. This is the numeric string from [AppFunctionTodoItem.id].</description>
+        </parameters>
+        <response>
+            <id>unused</id>
+            <valueType>
+                <dataTypeReference>com.shubham.todojetpackcompose.appfunctions.schemas.TodoMutationResult</dataTypeReference>
+                <id>unused</id>
+                <isNullable>false</isNullable>
+                <type>11</type>
+            </valueType>
+            <description>A [TodoMutationResult] indicating whether the todo was successfully marked as completed.</description>
+        </response>
+        <schemaCategory>todo</schemaCategory>
+        <schemaName>completeTodo</schemaName>
+        <schemaVersion>1</schemaVersion>
+        <functionId>com.shubham.todojetpackcompose.appfunctions.`impl`.CompleteTodoFunctionImpl#completeTodo</functionId>
+    </appfunction>
+    <appfunction>
+        <id>com.shubham.todojetpackcompose.appfunctions.`impl`.DeleteTodoFunctionImpl#deleteTodo</id>
+        <enabledByDefault>true</enabledByDefault>
+        <description>Permanently removes the todo with the given ID from the list.
+ Use this when the user wants to delete, remove, or discard a specific task.</description>
+        <parameters>
+            <dataTypeMetadata>
+                <id>unused</id>
+                <isNullable>false</isNullable>
+                <type>8</type>
+            </dataTypeMetadata>
+            <id>unused</id>
+            <isRequired>true</isRequired>
+            <name>todoId</name>
+            <description>The unique ID of the todo to delete. This is the numeric string from [AppFunctionTodoItem.id].</description>
+        </parameters>
+        <response>
+            <id>unused</id>
+            <valueType>
+                <dataTypeReference>com.shubham.todojetpackcompose.appfunctions.schemas.TodoMutationResult</dataTypeReference>
+                <id>unused</id>
+                <isNullable>false</isNullable>
+                <type>11</type>
+            </valueType>
+            <description>A [TodoMutationResult] indicating whether the todo was successfully deleted.</description>
+        </response>
+        <schemaCategory>todo</schemaCategory>
+        <schemaName>deleteTodo</schemaName>
+        <schemaVersion>1</schemaVersion>
+        <functionId>com.shubham.todojetpackcompose.appfunctions.`impl`.DeleteTodoFunctionImpl#deleteTodo</functionId>
+    </appfunction>
+    <appfunction>
+        <id>com.shubham.todojetpackcompose.appfunctions.`impl`.GetAllTodosFunctionImpl#getAllTodos</id>
+        <enabledByDefault>true</enabledByDefault>
+        <description>Returns every todo item currently stored in the app, both pending and completed.
+ Use this when the user wants to see, list, or review all their tasks.</description>
+        <response>
+            <id>unused</id>
+            <valueType>
+                <id>unused</id>
+                <isNullable>false</isNullable>
+                <itemType>
+                    <dataTypeReference>com.shubham.todojetpackcompose.appfunctions.schemas.AppFunctionTodoItem</dataTypeReference>
+                    <id>unused</id>
+                    <isNullable>false</isNullable>
+                    <type>11</type>
+                </itemType>
+                <type>10</type>
+            </valueType>
+            <description>A list of all [AppFunctionTodoItem] objects. Returns an empty list if no todos exist.</description>
+        </response>
+        <schemaCategory>todo</schemaCategory>
+        <schemaName>getAllTodos</schemaName>
+        <schemaVersion>1</schemaVersion>
+        <functionId>com.shubham.todojetpackcompose.appfunctions.`impl`.GetAllTodosFunctionImpl#getAllTodos</functionId>
+    </appfunction>
+    <appfunction>
+        <id>com.shubham.todojetpackcompose.appfunctions.`impl`.GetPendingTodosFunctionImpl#getPendingTodos</id>
+        <enabledByDefault>true</enabledByDefault>
+        <description>Returns all todo items that are still pending — i.e., not yet completed.
+ Use this when the user asks what tasks are remaining, outstanding, or still to do.</description>
+        <response>
+            <id>unused</id>
+            <valueType>
+                <id>unused</id>
+                <isNullable>false</isNullable>
+                <itemType>
+                    <dataTypeReference>com.shubham.todojetpackcompose.appfunctions.schemas.AppFunctionTodoItem</dataTypeReference>
+                    <id>unused</id>
+                    <isNullable>false</isNullable>
+                    <type>11</type>
+                </itemType>
+                <type>10</type>
+            </valueType>
+            <description>A list of pending [AppFunctionTodoItem] objects. Returns an empty list if all tasks are done.</description>
+        </response>
+        <schemaCategory>todo</schemaCategory>
+        <schemaName>getPendingTodos</schemaName>
+        <schemaVersion>1</schemaVersion>
+        <functionId>com.shubham.todojetpackcompose.appfunctions.`impl`.GetPendingTodosFunctionImpl#getPendingTodos</functionId>
+    </appfunction>
+    <appfunction>
+        <id>com.shubham.todojetpackcompose.appfunctions.`impl`.GetTodoStatsFunctionImpl#getTodoStats</id>
+        <enabledByDefault>true</enabledByDefault>
+        <description>Returns a summary of the current todo list: total count, completed count, and pending count.
+ Use this when the user asks how many tasks they have, how many are done, or wants a summary.</description>
+        <response>
+            <id>unused</id>
+            <valueType>
+                <dataTypeReference>com.shubham.todojetpackcompose.appfunctions.schemas.TodoStats</dataTypeReference>
+                <id>unused</id>
+                <isNullable>false</isNullable>
+                <type>11</type>
+            </valueType>
+            <description>A [TodoStats] object with counts for total, completed, and pending todos.</description>
+        </response>
+        <schemaCategory>todo</schemaCategory>
+        <schemaName>getTodoStats</schemaName>
+        <schemaVersion>1</schemaVersion>
+        <functionId>com.shubham.todojetpackcompose.appfunctions.`impl`.GetTodoStatsFunctionImpl#getTodoStats</functionId>
+    </appfunction>
+    <AppFunctionComponentMetadataDocument>
+        <dataTypes>
+            <dataTypeMetadata>
+                <id>unused</id>
+                <isNullable>true</isNullable>
+                <objectQualifiedName>com.shubham.todojetpackcompose.appfunctions.schemas.TodoMutationResult</objectQualifiedName>
+                <description>
+ Returned by any operation that creates, updates, or deletes a todo.
+</description>
+                <properties>
+                    <dataTypeMetadata>
+                        <id>unused</id>
+                        <isNullable>false</isNullable>
+                        <description>True if the operation completed successfully, false otherwise. </description>
+                        <type>1</type>
+                    </dataTypeMetadata>
+                    <id>unused</id>
+                    <name>success</name>
+                </properties>
+                <properties>
+                    <dataTypeMetadata>
+                        <id>unused</id>
+                        <isNullable>false</isNullable>
+                        <description>Human-readable message describing the outcome, suitable for display to the user. </description>
+                        <type>8</type>
+                    </dataTypeMetadata>
+                    <id>unused</id>
+                    <name>message</name>
+                </properties>
+                <required>success</required>
+                <required>message</required>
+                <type>3</type>
+            </dataTypeMetadata>
+            <id>unused</id>
+            <name>com.shubham.todojetpackcompose.appfunctions.schemas.TodoMutationResult</name>
+        </dataTypes>
+        <dataTypes>
+            <dataTypeMetadata>
+                <id>unused</id>
+                <isNullable>true</isNullable>
+                <objectQualifiedName>com.shubham.todojetpackcompose.appfunctions.schemas.AppFunctionTodoItem</objectQualifiedName>
+                <description>
+ Represents a single Todo item as seen by an external AI agent or caller.
+
+ Note: [id] is a String even though your Room DB stores it as Long.
+ AppFunctions serialization handles String cleanly across processes.
+ We convert Long → String in the mapper inside each impl.
+</description>
+                <properties>
+                    <dataTypeMetadata>
+                        <id>unused</id>
+                        <isNullable>false</isNullable>
+                        <description>Unique identifier for the todo (epoch millis as a numeric string e.g. "1709123456789"). </description>
+                        <type>8</type>
+                    </dataTypeMetadata>
+                    <id>unused</id>
+                    <name>id</name>
+                </properties>
+                <properties>
+                    <dataTypeMetadata>
+                        <id>unused</id>
+                        <isNullable>false</isNullable>
+                        <description>The task description text. </description>
+                        <type>8</type>
+                    </dataTypeMetadata>
+                    <id>unused</id>
+                    <name>task</name>
+                </properties>
+                <properties>
+                    <dataTypeMetadata>
+                        <id>unused</id>
+                        <isNullable>false</isNullable>
+                        <description>
+ Current status. Always one of "PENDING" or "COMPLETED".
+ Matches [com.shubham.todojetpackcompose.common.Utils.TodoStatus].
+</description>
+                        <enumValues>PENDING</enumValues>
+                        <enumValues>COMPLETED</enumValues>
+                        <type>8</type>
+                    </dataTypeMetadata>
+                    <id>unused</id>
+                    <name>status</name>
+                </properties>
+                <required>id</required>
+                <required>task</required>
+                <required>status</required>
+                <type>3</type>
+            </dataTypeMetadata>
+            <id>unused</id>
+            <name>com.shubham.todojetpackcompose.appfunctions.schemas.AppFunctionTodoItem</name>
+        </dataTypes>
+        <dataTypes>
+            <dataTypeMetadata>
+                <id>unused</id>
+                <isNullable>true</isNullable>
+                <objectQualifiedName>com.shubham.todojetpackcompose.appfunctions.schemas.TodoStats</objectQualifiedName>
+                <description>
+ Aggregated statistics about the current state of the todo list.
+</description>
+                <properties>
+                    <dataTypeMetadata>
+                        <id>unused</id>
+                        <isNullable>false</isNullable>
+                        <description>Total number of todos (pending + completed). </description>
+                        <type>7</type>
+                    </dataTypeMetadata>
+                    <id>unused</id>
+                    <name>total</name>
+                </properties>
+                <properties>
+                    <dataTypeMetadata>
+                        <id>unused</id>
+                        <isNullable>false</isNullable>
+                        <description>Number of todos marked as COMPLETED. </description>
+                        <type>7</type>
+                    </dataTypeMetadata>
+                    <id>unused</id>
+                    <name>completed</name>
+                </properties>
+                <properties>
+                    <dataTypeMetadata>
+                        <id>unused</id>
+                        <isNullable>false</isNullable>
+                        <description>Number of todos still marked as PENDING. </description>
+                        <type>7</type>
+                    </dataTypeMetadata>
+                    <id>unused</id>
+                    <name>pending</name>
+                </properties>
+                <required>total</required>
+                <required>completed</required>
+                <required>pending</required>
+                <type>3</type>
+            </dataTypeMetadata>
+            <id>unused</id>
+            <name>com.shubham.todojetpackcompose.appfunctions.schemas.TodoStats</name>
+        </dataTypes>
+        <id>unused</id>
+    </AppFunctionComponentMetadataDocument>
+</appfunctions>
